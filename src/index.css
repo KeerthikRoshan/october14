@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-handwriting: "Caveat", "Dancing Script", cursive;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-romantic-rose: #f43f5e;
+  --color-romantic-blush: #fb7185;
+  --color-romantic-cream: #fdfbf7;
+  --color-romantic-gold: #fbbf24;
+  --color-romantic-amber: #f59e0b;
+  --color-romantic-dark: #09090b;
+}
+
+:root {
+  color-scheme: dark;
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #09090b;
+  color: #f4f4f5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Custom Safe Area Utilities */
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top, 0px), 12px);
+}
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 16px);
+}
+.safe-h-screen {
+  height: 100dvh;
+}
+
+/* Hide scrollbars for clean story look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Soft glowing effects */
+.glow-gold {
+  box-shadow: 0 0 25px rgba(251, 191, 36, 0.35), 0 0 50px rgba(245, 158, 11, 0.2);
+}
+
+.glow-rose {
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.4), 0 0 50px rgba(251, 113, 133, 0.2);
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 16px rgba(251, 191, 36, 0.5);
+}
+
+.glow-text-rose {
+  text-shadow: 0 0 16px rgba(244, 63, 94, 0.5);
+}
+
+/* Polaroid subtle photo shadow and texture */
+.polaroid-card {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtle film grain overlay */
+.film-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
